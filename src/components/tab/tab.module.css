@@ -1,0 +1,57 @@
+* {
+  transition: all 200ms ease-in-out;
+}
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #deb887;
+}
+
+.tab:hover {
+  background-color: #dba45d;
+}
+
+.title {
+  color: #9b6522;
+}
+
+.remove,
+.reset {
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0;
+  border-radius: 15px;
+}
+
+.remove {
+  right: 10px;
+}
+.reset {
+  right: 55px;
+}
+
+.tab:hover .remove,
+.tab:hover .reset {
+  opacity: 1;
+}
+.remove,
+.reset {
+  background-color: #deb887;
+}
+.reset:hover {
+  background-color: #ded887;
+}
+.remove:hover {
+  background-color: #de8787;
+  /* background-color: #6f5c43; */
+}

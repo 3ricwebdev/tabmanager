@@ -1,0 +1,18 @@
+* {
+  transition: all 200ms ease-in-out;
+}
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #deb887;
+}
+
+.tab:hover {
+  background-color: #dba45d;
+}
