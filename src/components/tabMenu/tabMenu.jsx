@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import styles from "./tabMenu.module.css";
 import { TabMenuContext } from "../../contexts/tabMenuContext";
+import { v4 as idGen } from "uuid";
 export default function TabMenu() {
   const {
     menuState,
@@ -13,7 +14,8 @@ export default function TabMenu() {
   const create = () => {
     const itemsFromLs = JSON.parse(localStorage.getItem("tabs"));
     let id;
-    !itemsFromLs ? (id = 0) : (id = itemsFromLs.length);
+    !itemsFromLs ? (id = 0) : (id = idGen());
+    console.log(id);
     const { url, title } = inputValues;
     let item = { id, url, title };
     if (!url || !title) return;

@@ -5,18 +5,16 @@ import { useContext, useEffect, useState } from "react";
 import { TabMenuContext } from "../../contexts/tabMenuContext";
 
 export default function TabContainer() {
-  const { itemsLsLength } = useContext(TabMenuContext);
-
   let itemsFromLs = JSON.parse(localStorage.getItem("tabs"));
-  if (!itemsFromLs) itemsFromLs = null;
+  if (itemsFromLs.length < 1) itemsFromLs = null;
   const [items, setItems] = useState(itemsFromLs);
   const handleChanges = (tabs) => {
     setItems(tabs);
   };
+  const { itemsLsLength } = useContext(TabMenuContext);
 
   useEffect(() => {
     setItems(itemsFromLs);
-    console.log("EFFECT!");
   }, [itemsLsLength]);
 
   return (

@@ -4,7 +4,7 @@ export const TabMenuContext = createContext();
 export const TabMenuContextProvider = ({ children }) => {
   const [menuState, setMenuState] = useState(false);
   const [inputValues, setInputValues] = useState({ url: "", title: "" });
-  const [itemsLsLength, setItemsLsLength] = useState(null);
+  const [itemsLsLength, setItemsLsLength] = useState();
   return (
     <TabMenuContext.Provider
       value={{

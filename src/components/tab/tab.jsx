@@ -25,7 +25,7 @@ export default function Tab({ id, url, title, action }) {
 }
 
 Tab.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   action: PropTypes.func,
