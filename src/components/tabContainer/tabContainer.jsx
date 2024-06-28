@@ -16,6 +16,7 @@ export default function TabContainer() {
 
   useEffect(() => {
     setItems(itemsFromLs);
+    console.log("EFFECT!");
   }, [itemsLsLength]);
 
   return (

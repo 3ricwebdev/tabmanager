@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import styles from "./tabMenu.module.css";
 import { TabMenuContext } from "../../contexts/tabMenuContext";
 export default function TabMenu() {
@@ -9,13 +9,6 @@ export default function TabMenu() {
     setInputValues,
     setItemsLsLength,
   } = useContext(TabMenuContext);
-
-  // useEffect(() => {
-  //   if (menuState) {
-  //     setMenuState(true);
-  //     return;
-  //   }
-  // }, [menuState]);
 
   const create = () => {
     const itemsFromLs = JSON.parse(localStorage.getItem("tabs"));
